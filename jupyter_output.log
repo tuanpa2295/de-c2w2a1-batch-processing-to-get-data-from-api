@@ -1,0 +1,28 @@
+nohup: ignoring input
+[I 2024-09-21 03:59:30.480 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-09-21 03:59:30.493 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-09-21 03:59:30.509 ServerApp] jupyterlab | extension was successfully linked.
+[I 2024-09-21 03:59:30.512 ServerApp] Writing Jupyter server cookie secret to /home/ec2-user/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2024-09-21 03:59:31.633 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-09-21 03:59:31.682 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-09-21 03:59:31.694 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-09-21 03:59:31.699 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-09-21 03:59:31.702 LabApp] JupyterLab extension loaded from /home/ec2-user/environment/jupyterlab-venv/lib64/python3.9/site-packages/jupyterlab
+[I 2024-09-21 03:59:31.702 LabApp] JupyterLab application directory is /home/ec2-user/environment/jupyterlab-venv/share/jupyter/lab
+[I 2024-09-21 03:59:31.703 LabApp] Extension Manager is 'pypi'.
+[I 2024-09-21 03:59:31.712 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-09-21 03:59:31.713 ServerApp] Serving notebooks from local directory: /home/ec2-user/environment
+[I 2024-09-21 03:59:31.713 ServerApp] Jupyter Server 2.14.2 is running at:
+[I 2024-09-21 03:59:31.713 ServerApp] http://ip-10-0-1-193.ec2.internal:8888/lab?token=81b51f92ac1b9fc2a0f891d67871b63f9e8d9e871253230a
+[I 2024-09-21 03:59:31.713 ServerApp]     http://127.0.0.1:8888/lab?token=81b51f92ac1b9fc2a0f891d67871b63f9e8d9e871253230a
+[I 2024-09-21 03:59:31.713 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2024-09-21 03:59:31.723 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2024-09-21 03:59:31.724 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ec2-user/.local/share/jupyter/runtime/jpserver-3393-open.html
+    Or copy and paste one of these URLs:
+        http://ip-10-0-1-193.ec2.internal:8888/lab?token=81b51f92ac1b9fc2a0f891d67871b63f9e8d9e871253230a
+        http://127.0.0.1:8888/lab?token=81b51f92ac1b9fc2a0f891d67871b63f9e8d9e871253230a
+[I 2024-09-21 03:59:32.406 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+Jupyter is running at: http://ec2-54-234-199-3.compute-1.amazonaws.com:8888/lab?token=81b51f92ac1b9fc2a0f891d67871b63f9e8d9e871253230a
