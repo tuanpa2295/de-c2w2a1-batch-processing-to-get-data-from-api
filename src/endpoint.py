@@ -29,12 +29,12 @@ def get_paginated_featured_playlists(
             ### Exercise 4:
             ### START CODE HERE ### (~ 11 lines of code)
             # Create an if condition over the status code of the response
-            if None.status_code == 401:  # Unauthorized
+            if response.status_code == 401:  # Unauthorized
                 # Handle token expiration and update
-                token_response = None(**None)
-                if "None" in None:
-                    headers = None(
-                        access_token=None["None"]
+                token_response = get_token(**kwargs)
+                if "access_token" in token_response :
+                    headers = get_auth_header(
+                        access_token=token_response["access_token"]
                     )
                     print("Token has been refreshed")
                     continue  # Retry the request with the updated token
@@ -77,25 +77,25 @@ def get_paginated_spotify_playlist(
     ### Exercise 5:
     ### START CODE HERE ### (~ 23 lines of code)
     # Call the get_auth_header() function with the access token.
-    headers = None(access_token=None)
+    headers = get_auth_header(access_token=access_token)
     #  Create the requests_url by using the base_url and playlist_id parameters. At the end, you will add tracks to the URL endpoint.
-    request_url = f"{None}/{None}/tracks?fields={fields}"
+    request_url = f"{base_url}/{playlist_id}/tracks?fields={fields}"
     playlist_data = []
 
     try:
         while request_url:
             print(f"Requesting to: {request_url}")
             # Perform a GET request using the request_url and headers that you created in the previous steps.
-            response = None.None(url=None, headers=None)
+            response = requests.get(url=request_url, headers=headers)
             print(f"response {response}")
 
-            if None.status_code == 401:  # Unauthorized
+            if response.status_code == 401:  # Unauthorized
                 # Handle token expiration and update.
-                token_response = None(**None)
-                if "None" in None:
+                token_response = get_token(**kwargs)
+                if "access_token" in token_response:
                     # Call get_auth_header() function with the "access_token" from the token_response.
-                    headers = None(
-                        access_token=None["None"]
+                    headers = get_auth_header(
+                        access_token=token_response["access_token"]
                     )
                     print("Token has been refreshed")
                     continue  # Retry the request with the updated token
@@ -104,11 +104,11 @@ def get_paginated_spotify_playlist(
                     return []
 
             # Convert the response to json using the json() method.
-            response_json = None.None()
+            response_json = response.json()
             # Extend the playlist_data list with the value from "items" in response_json.
-            playlist_data.None(None["None"])
+            playlist_data.extend(response_json["items"])
             # Update request_url with the "next" value from response_json.
-            request_url = None["None"]
+            request_url = response_json["next"]
 
         return playlist_data
     ### END CODE HERE ###
