@@ -56,12 +56,12 @@ def main():
     ### START CODE HERE ### (~ 9 lines of code)
     for playlist_id in playlists_ids:
         playlist_data = get_paginated_spotify_playlist(
-            base_url=None,
-            access_token=token.None("None"),
-            playlist_id=None,
-            fields=None,
-            get_token=None,
-            **None,
+            base_url=URL_PLAYLIST_ITEMS,
+            access_token=token.get("access_token"),
+            playlist_id=playlist_id,
+            fields=PLAYLIST_ITEMS_FIELDS,
+            get_token=get_token,
+            **kwargs,
         )
     ### END CODE HERE ###
 
